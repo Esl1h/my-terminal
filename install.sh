@@ -7,6 +7,9 @@ sudo apt-get install most zsh python-pip python3-pip fonts-powerline git-extras 
 # Install tldr - a terminal app to show examples of use apps (more quick than manpages)
 sudo pip install tldr setuptools
 
+
+read -n 1 -s -r -p "Now, will be installed oh-my-zsh - When finished, press CTRL+D to continue , ok? Press any key to continue"
+
 # Install oh-my-zsh
 sh -c "$(wget https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh -O -)"
 
