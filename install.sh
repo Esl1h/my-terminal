@@ -12,7 +12,7 @@ mkdir ~/Apps/
 
 # install fonts do ZSH and powerlevel theme
 mkdir ~/.fonts && cd ~/.fonts/ 
-wget -c https://github.com/ryanoasis/nerd-fonts/releases/download/v1.2.0/Hack.zip 
+wget -c https://github.com/ryanoasis/nerd-fonts/releases/download/v1.2.0/Hack.zip  -P ~/.fonts/
 unzip Hack.zip
  
 
