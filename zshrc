@@ -49,6 +49,5 @@ plugins=(
 
 # Setup alias and exports:
 export MANPAGER="/usr/bin/most -s"
-export ZSH="/home/essilva/.oh-my-zsh"
 
 
