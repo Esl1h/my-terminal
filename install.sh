@@ -2,18 +2,17 @@
 # reference: https://medium.com/@ivanaugustobd/seu-terminal-pode-ser-muito-muito-mais-produtivo-3159c8ef77b2
 
 # install apps essentials:
-apt-get install most zsh python-pip python3-pip fonts-powerline git-extras wget 
+sudo apt-get install most zsh python-pip python3-pip fonts-powerline git-extras wget 
 
 # Install tldr - a terminal app to show examples of use apps (more quick than manpages)
-pip install tldr setuptools
+sudo pip install tldr setuptools
 
 # folder to install some apps
 mkdir ~/Apps/
 
 # install fonts do ZSH and powerlevel theme
-mkdir ~/.fonts
-cd .fonts/ 
-wget -c https://github.com/ryanoasis/nerd-fonts/releases/download/v1.2.0/Hack.zip
+mkdir ~/.fonts && cd ~/.fonts/ 
+wget -c https://github.com/ryanoasis/nerd-fonts/releases/download/v1.2.0/Hack.zip 
 unzip Hack.zip
  
 
