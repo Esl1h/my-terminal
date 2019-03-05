@@ -1,5 +1,3 @@
-export ZSH="~/.oh-my-zsh"
-
 ZSH_THEME="powerlevel9k/powerlevel9k"
 POWERLEVEL9K_MODE="nerdfont-complete"
 POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(context dir rbenv vcs)
@@ -49,8 +47,8 @@ plugins=(
     bgnotify
 )
 
-
-source $ZSH/oh-my-zsh.sh
-
 # Setup alias and exports:
 export MANPAGER="/usr/bin/most -s"
+export ZSH="/home/essilva/.oh-my-zsh"
+
+
