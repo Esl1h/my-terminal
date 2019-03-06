@@ -36,6 +36,6 @@ mkdir ~/Apps/
 
 # install and config zshrc file:
 rm ~/.zshrc
-wget -c https://raw.githubusercontent.com/Esl1h/my-zsh/master/zshrc -O ~/.zshrc
+wget -c https://raw.githubusercontent.com/Esl1h/my-terminal/master/zshrc -O ~/.zshrc
 echo export ZSH=\""$HOME"/.oh-my-zsh\" >> ~/.zshrc
 echo "source \$ZSH/oh-my-zsh.sh" >> ~/.zshrc
