@@ -19,8 +19,6 @@ mkdir ~/.fonts
 wget -c https://github.com/ryanoasis/nerd-fonts/releases/download/v1.2.0/Hack.zip  -P ~/.fonts/
 cd ~/.fonts/ && unzip Hack.zip 
 
-export MANPAGER="/usr/bin/most -s"
-
 # install some plugins to zsh - syntax high lighting and command auto suggestions
 git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ~/.oh-my-zsh/custom/plugins/zsh-syntax-highlighting
 
@@ -31,11 +29,9 @@ git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf && ~/.fzf/install
 # powerlevel9k zsh theme
 git clone https://github.com/bhilburn/powerlevel9k.git ~/.oh-my-zsh/custom/themes/powerlevel9k
 
-# folder to install some apps
-mkdir ~/Apps/
-
 # install and config zshrc file:
 rm ~/.zshrc
 wget -c https://raw.githubusercontent.com/Esl1h/my-terminal/master/zshrc -O ~/.zshrc
 echo export ZSH=\""$HOME"/.oh-my-zsh\" >> ~/.zshrc
 echo "source \$ZSH/oh-my-zsh.sh" >> ~/.zshrc
+echo 'export MANPAGER="/usr/bin/most -s" ' >> ~/.zshrc
