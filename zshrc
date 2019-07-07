@@ -36,7 +36,6 @@ plugins=(
     ansible
     aws
     docker-compose
-    gn
     gitfast
     terraform
     vscode
