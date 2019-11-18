@@ -48,5 +48,8 @@ plugins=(
 
 # Setup alias and exports:
 export MANPAGER="/usr/bin/most -s"
+alias ll='ls -alF'
+alias la='ls -A'
+alias l='ls -CF'
 
 
