@@ -2,10 +2,10 @@
 # reference: https://medium.com/@ivanaugustobd/seu-terminal-pode-ser-muito-muito-mais-produtivo-3159c8ef77b2
 
 # install apps essentials:
-sudo apt-get install most zsh python-pip python3-pip fonts-powerline git-extras wget 
+sudo apt-get install most zsh python3-pip fonts-powerline git-extras wget 
 
 # Install tldr - a terminal app to show examples of use apps (more quick than manpages)
-sudo pip install tldr setuptools
+sudo pip3 install tldr setuptools
 
 echo "\n\n\n\n"
 echo ################################
