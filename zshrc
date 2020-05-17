@@ -31,7 +31,6 @@ plugins=(
     dotenv
     rake
     rbenv
-    ruby
     ansible
     aws
     docker-compose
