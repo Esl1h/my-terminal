@@ -42,6 +42,7 @@ plugins=(
     zsh-syntax-highlighting
     zsh-autosuggestions
     bgnotify
+    kubetail
 )
 
 # Setup alias and exports:
@@ -50,4 +51,6 @@ alias ll='ls -alF'
 alias la='ls -A'
 alias l='ls -CF'
 
-
+alias k=kubectl
+complete -F __start_kubectl k
+source <(kubectl completion zsh)
