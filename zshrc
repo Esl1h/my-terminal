@@ -56,5 +56,4 @@ alias ll='ls -alF'
 alias la='ls -A'
 alias l='ls -CF'
 alias k='kubectl'
-complete -F __start_kubectl k
 source <(kubectl completion zsh)
