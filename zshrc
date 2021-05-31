@@ -1,3 +1,6 @@
+autoload -Uz compinit
+compinit
+
 ZSH_THEME="powerlevel9k/powerlevel9k"
 POWERLEVEL9K_MODE="nerdfont-complete"
 POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(context dir rbenv vcs)
@@ -27,6 +30,7 @@ HIST_STAMPS="dd.mm.yyyy"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 plugins=(
     git
+    git-flow
     bundler
     dotenv
     rake
@@ -42,6 +46,7 @@ plugins=(
     zsh-syntax-highlighting
     zsh-autosuggestions
     bgnotify
+    kubectl
     kubetail
 )
 
@@ -50,7 +55,6 @@ export MANPAGER="/usr/bin/most -s"
 alias ll='ls -alF'
 alias la='ls -A'
 alias l='ls -CF'
-
-alias k=kubectl
+alias k='kubectl'
 complete -F __start_kubectl k
 source <(kubectl completion zsh)
