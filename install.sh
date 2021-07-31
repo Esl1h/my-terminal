@@ -4,7 +4,7 @@
 # install apps essentials:
 sudo apt-get install most zsh python3-pip fonts-powerline git-extras wget fzf
 
-# Install tldr - a terminal app to show examples of use apps (more quick than manpages)
+# Install tldr - a terminal app to show examples of use apps (more quick than manpages) | kube-shell
 sudo pip3 install tldr setuptools
 
 echo "\n\n\n\n"
@@ -13,6 +13,9 @@ read -n 1 -s -r -p "Now, will be install oh-my-zsh - When finished, press CTRL+D
 
 # Install oh-my-zsh
 sh -c "$(wget https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh -O -)"
+
+mkdir -p ~/.oh-my-zsh/completions
+chmod -R 755 ~/.oh-my-zsh/completions
 
 # install fonts do ZSH and powerlevel theme
 mkdir ~/.fonts
@@ -26,6 +29,8 @@ git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ~/.oh-my-zsh/
 
 git clone https://github.com/zsh-users/zsh-autosuggestions ~/.oh-my-zsh/custom/plugins/zsh-autosuggestions
 
+git clone https://github.com/johanhaleby/kubetail.git ~/.oh-my-zsh/custom/plugins/kubetail
+
 git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf && ~/.fzf/install
 
 # powerlevel9k zsh theme
@@ -34,5 +39,20 @@ git clone https://github.com/bhilburn/powerlevel9k.git ~/.oh-my-zsh/custom/theme
 # install and config zshrc file:
 rm ~/.zshrc
 wget -c https://raw.githubusercontent.com/Esl1h/my-terminal/master/zshrc -O ~/.zshrc
+
+# kubens + kubectx
+sudo git clone https://github.com/ahmetb/kubectx /opt/kubectx
+
+sudo ln -s /opt/kubectx/kubectx /usr/local/bin/kubectx
+sudo ln -s /opt/kubectx/kubens /usr/local/bin/kubens
+ln -s /opt/kubectx/completion/kubectx.zsh ~/.oh-my-zsh/completions/_kubectx.zsh
+ln -s /opt/kubectx/completion/kubens.zsh ~/.oh-my-zsh/completions/_kubens.zsh
+
+wget -c https://raw.githubusercontent.com/johanhaleby/kubetail/master/completion/kubetail.zsh -O ~/.oh-my-zsh/completions/_kubetail.zsh
+
 echo export ZSH=\""$HOME"/.oh-my-zsh\" >> ~/.zshrc
 echo "source \$ZSH/oh-my-zsh.sh" >> ~/.zshrc
+
+# Customizing colors - kubens
+echo 'export KUBECTX_CURRENT_FGCOLOR=$(tput setaf 6) # blue text ' >> ~/.zshrc 
+echo 'export KUBECTX_CURRENT_BGCOLOR=$(tput setab 7) # white background ' >> ~/.zshrc
