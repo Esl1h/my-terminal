@@ -2,7 +2,7 @@
 # reference: https://medium.com/@ivanaugustobd/seu-terminal-pode-ser-muito-muito-mais-produtivo-3159c8ef77b2
 
 # install apps essentials:
-sudo apt-get install most zsh python3-pip fonts-powerline git-extras wget 
+sudo apt-get install most zsh python3-pip fonts-powerline git-extras wget fzf
 
 # Install tldr - a terminal app to show examples of use apps (more quick than manpages)
 sudo pip3 install tldr setuptools
@@ -20,6 +20,8 @@ wget -c https://github.com/ryanoasis/nerd-fonts/releases/download/v1.2.0/Hack.zi
 cd ~/.fonts/ && unzip Hack.zip 
 
 # install some plugins to zsh - syntax high lighting and command auto suggestions
+mkdir ~/.oh-my-zsh/completions
+
 git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ~/.oh-my-zsh/custom/plugins/zsh-syntax-highlighting
 
 git clone https://github.com/zsh-users/zsh-autosuggestions ~/.oh-my-zsh/custom/plugins/zsh-autosuggestions
@@ -34,4 +36,3 @@ rm ~/.zshrc
 wget -c https://raw.githubusercontent.com/Esl1h/my-terminal/master/zshrc -O ~/.zshrc
 echo export ZSH=\""$HOME"/.oh-my-zsh\" >> ~/.zshrc
 echo "source \$ZSH/oh-my-zsh.sh" >> ~/.zshrc
-echo 'export MANPAGER="/usr/bin/most -s" ' >> ~/.zshrc
